@@ -7,7 +7,6 @@ body{
   padding: 0;
 }
 .tool >a>i{
-	background-image: url("/images/icon+.png");
     display: inline-block;
     height: 16px;
     line-height: 16px;
@@ -16,7 +15,6 @@ body{
     margin-right: 4px;
 }
 .fa{
-	background-image: url("/images/icon+.png");
     display: inline-block;
     height: 15px;
     line-height: 15px;
@@ -876,7 +874,6 @@ code, kbd, pre, samp {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 div.view-error > pre,pre {
-    background-image: url("/images/blueprint.png");
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat;

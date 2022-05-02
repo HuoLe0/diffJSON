@@ -277,9 +277,15 @@ public class CompareUtils {
     }
 
     public static void main(String[] args) {
-        String str1 = "{\"status\":2021,\"msg\":[{\"msg1\":\"狗东西1，今天您已经领取过，明天可以继续领取哦！\"}, {\"msg2\":\"狗东西2，今天您已经领取过，明天可以继续领取哦！\"}],\"res\":{\"remainCouponNum\":\"5\",\"userId\":\"1231232是13222\"}}";
+        String str1 = "{\n" +
+                "    \"提示\":\"请输入需要比对的JSON\"\n" +
+                "}";
+        String str2 = "{\n" +
+                "\n" +
+                "}";
+//        String str1 = "{\"status\":2021,\"msg\":[{\"msg1\":\"狗东西1，今天您已经领取过，明天可以继续领取哦！\"}, {\"msg2\":\"狗东西2，今天您已经领取过，明天可以继续领取哦！\"}],\"res\":{\"remainCouponNum\":\"5\",\"userId\":\"1231232是13222\"}}";
         JSONObject jsonObject1 = JSONObject.parseObject(str1);
-        String str2 = "{\"status\":201,\"msg\":[{\"msg2\":\"1今天您已经领取过，明天可以继续领取哦！\"}, {\"msg1\":\"2今天您已经领取过，明天可以继续领取哦！\"}],,\"res\":{\"remainCouponNum\":\"5\",\"userId\":\"123123213222\"}}";
+//        String str2 = "{\"status\":201,\"msg\":[{\"msg2\":\"1今天您已经领取过，明天可以继续领取哦！\"}, {\"msg1\":\"2今天您已经领取过，明天可以继续领取哦！\"}],,\"res\":{\"remainCouponNum\":\"5\",\"userId\":\"123123213222\"}}";
         JSONObject jsonObject2 = JSONObject.parseObject(str2);
 
         System.out.println("核对结果: " + diffJSONObject("str1", jsonObject1, "str2", jsonObject2).toString());

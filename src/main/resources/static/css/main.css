@@ -453,6 +453,23 @@ table.diff thead th.texttitle {
     z-index: 30;
     opacity: 0.5;
 }
+.label-t-t{
+  border: solid 1px dodgerblue;
+  background: #fff;
+  display: inline-block;
+  height: 22px;
+  padding: 0 6px;
+  line-height: 22px;
+  position: absolute;
+  bottom: 7px;
+  right: 6px;
+  text-align: center;
+  font-size: 12px;
+  color: dodgerblue;
+  border-radius: 1px;
+  z-index: 30;
+  opacity: 0.5;
+}
 
 
 .historys {

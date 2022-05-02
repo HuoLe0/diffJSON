@@ -19,6 +19,14 @@ public class CompareController {
         JSONObject result = new JSONObject();
         String current = object.getString("current");
         String expected = object.getString("expected");
+        if (current.equals("")){
+            result.put("比对结果", "jsonA不得为空！");
+            return result;
+        }
+        if (expected.equals("")){
+            result.put("比对结果", "jsonB不得为空！");
+            return result;
+        }
         String origin = request.getHeader("Origin");
         if (origin == null) {
             response.addHeader("Access-Control-Allow-Origin", "*");
