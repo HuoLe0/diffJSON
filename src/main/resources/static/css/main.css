@@ -163,7 +163,7 @@ padding: 10px;
 .side-left {
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 57px;
   bottom: 0;
   width: 40%;
   overflow: hidden;
@@ -172,6 +172,7 @@ padding: 10px;
 }
 
 .left-panel {
+  opacity: 80%;
   height: 100%;
   position: relative
 }
@@ -184,7 +185,7 @@ textarea {
   outline: none;
   border: none;
   resize: none;
-  padding: 10px;
+  padding: 0px;
   font-size: 14px;;
   line-height: 1.42857143;
 }
@@ -444,7 +445,7 @@ table.diff thead th.texttitle {
     padding: 0 6px;
     line-height: 22px;
     position: absolute;
-    top: 7px;
+    top: 10px;
     right: 6px;
     text-align: center;
     font-size: 12px;

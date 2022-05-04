@@ -1,10 +1,13 @@
 body{
-  font-family:Tahoma,Verdana,Menlo,Monaco,Consolas,"Helvetica Neue",Helvetica,"Courier New",'΢���ź�', monospace, Arial,sans-serif,'��Բ','����';
-  color: #4A5560;
-  line-height: 1.42857;
-  font-size: 13px;
-  margin: 0;
-  padding: 0;
+    background-image: url("../images/img_1.png") !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+      font-family:Tahoma,Verdana,Menlo,Monaco,Consolas,"Helvetica Neue",Helvetica,"Courier New",'΢���ź�', monospace, Arial,sans-serif,'��Բ','����';
+      color: #4A5560;
+      line-height: 1.42857;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
 }
 .tool >a>i{
     display: inline-block;
@@ -98,6 +101,8 @@ a:hover{
     background-color: #0fd59d;
 }
 .header{
+    opacity: 70%;
+    background-color: darkred;
     border-bottom: solid 1px #E5EBEE;
     padding: 0px;
 }

@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>JSON在线对比</title>
 	<meta name="description" content="在线对比JSON文件">
-	<meta content="JSON对比,JSON文件对比,JSON" name="Keywords">
+	<meta content="JSON对比,JSON文件对比,JSON DIFF" name="Keywords">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/base.css" rel="stylesheet">
 	<link id="favicon" rel="shortcut icon" href="./images/img.png" sizes="16x16 32x32" type="image/png">
@@ -23,9 +23,9 @@
 	<header class="header">
 		<div class="row-fluid">
 			<div class="col-md-5" style="position:relative;">
-				<img src="./images/img.png" style="line-height: 32px; height: 32px;">
-				<a class="logo" href="/" one-link-mark="yes">DHU<span style="color:blue;"> | HuoLe</span></a>
-				<h1>JSON对比,JSON文件对比,JSON数据对比</h1>
+				<img src="./images/img.png" style="line-height: 56px; height: 56px;">
+				<a class="logo" href="/" one-link-mark="yes" style="color:whitesmoke;">DHU<span style="color:whitesmoke;"> | HuoLe</span></a>
+				<h1 style="color:whitesmoke;">JSON对比, JSON文件对比, JSON DIFF</h1>
 			</div>
 <!--			<nav class="col-md-7" style="padding:10px 0; ">-->
 <!--				<div class="navi">-->
@@ -42,12 +42,12 @@
 	<div id="app">
 		<div class="side-left side-view-diff">
 			<div class="left-panel">
-				<textarea id="jsonA"></textarea>
+				<textarea id="jsonA" style="color: darkorange"></textarea>
 				<div class="label-t">JSON A</div>
 				<input id="upload-jsonA" class="label-t-t" type="file" accept="application/json">
 			</div>
 			<div class="left-panel">
-				<textarea id="jsonB"></textarea>
+				<textarea id="jsonB" style="color: darkred"></textarea>
 				<div class="label-t">JSON B</div>
 				<input id="upload-jsonB" class="label-t-t" type="file" accept="application/json">
 			</div>
@@ -58,7 +58,7 @@
 				<div class="right-bar">
 					<a data-hint="Diff" class="hint--top" one-link-mark="yes">
 						<i class="fa fa-adjust"></i>
-						<span class="slogan">「JSON对比」请点击--></span>
+						<span class="slogan" style="color: whitesmoke">「JSON对比」请点击--></span>
 					</a>
 					<div href="/" style="color: dodgerblue;" one-link-mark="yes">
 						<i class="fa fa-check-circle"></i>
@@ -76,19 +76,20 @@
 						</thead>
 						<tbody id="diffBody">
 						<tr>
-							<td class="replace">{</td>
+							<td class="error-position">{</td>
 						</tr>
 						<tr>
-							<td class="replace">    "提示":"请输入需要比对的JSON"</td>
+							<td class="error-position">    "提示":"请输入需要比对的JSON"</td>
 						</tr>
 						<tr>
-							<td class="replace">}</td>
+							<td class="error-position">}</td>
 						</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
+		<div style="background-color: lightgrey; height: auto; width: auto; margin-top: 680px; color: whitesmoke; text-align: center">Copyright©2021 松江校区：上海市松江区人民北路2999号 201620，延安路校区：上海市长宁区延安西路1882号 200051</div>
 	</div>
 
 	<!--用于移动的时候遮住文本域 避免被选中-->
@@ -134,6 +135,7 @@
 		}
 
 		$("#upload-jsonA").change(function (){
+			$("#jsonA").html()
 			var file = this.files[0];
 			var fr = new FileReader();
 			fr.readAsText(file);
@@ -143,6 +145,7 @@
 			}
 		})
 		$("#upload-jsonB").change(function (){
+			$("#jsonB").html()
 			var file = this.files[0];
 			var fr = new FileReader();
 			fr.readAsText(file);
@@ -169,11 +172,11 @@
 						result =
 								'<tr>\n' +
 								'<th>原始数据</th>' +
-								'<td class="equal">{#json}</td>\n' +
+								'<td class="error-position">{#json}</td>\n' +
 								'</tr>\n' +
 								'<tr>\n' +
 								'<th>格式化数据</th>' +
-								'<td class="equal"><pre id="geoJsonTxt"></pre></td>\n' +
+								'<td class="replace"><pre id="geoJsonTxt"></pre></td>\n' +
 								'</tr>\n';
 						result = result.replace("{#json}", JSON.stringify(json))
 						$("#diffBody").append(result)
